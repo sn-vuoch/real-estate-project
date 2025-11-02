@@ -22,9 +22,10 @@
 
 
 
-<style type="text/tailwindcss">
-  @custom-variant dark (&:where(.dark, .dark *));
-</style>
+<script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
 
   
   
@@ -35,25 +36,25 @@
     
     <!-- header -->
   <header class="  w-full shadow">
-  <nav class="bg-white dark:bg-gray-900 shadow sticky w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+  <nav class="bg-white dark:bg-gray-500 shadow sticky w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div class=" flex flex-wrap items-center justify-between mx-auto p-4">
             <!-- Logo -->
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <div class="flex items-center">
                     <i class="fa-solid fa-house text-orange-500 text-4xl md:text-5xl"></i>
-                    <p class="self-center text-xl md:text-2xl font-semibold whitespace-nowrap  ml-2">
+                    <p class="self-center text-xl md:text-2xl font-semibold whitespace-nowrap  ml-2 dark:text-white">
                         Real <span class="text-orange-500">Estate</span>
                     </p>
                 </div>
             </a>
 
             <!-- Desktop Navigation - Visible on tablet and larger -->
-            <div class="hidden md:flex items-center space-x-8">
-                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200">Home</a>
-                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200">Buy</a>
-                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200">Rent</a>
-                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200">Agent</a>
-                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200">About</a>
+            <div class="hidden md:flex items-center space-x-8 ">
+                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500">Home</a>
+                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500">Buy</a>
+                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500">Rent</a>
+                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500">Agent</a>
+                <a href="#" class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500">About</a>
             </div>
 
             <!-- Desktop Buttons - Visible on tablet and larger -->
@@ -73,11 +74,11 @@
                     </button>
              
                     <!-- login btn -->
-                <button type="button" class="text-black border border-amber-600 hover:bg-orange-500 hover:text-white font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 w-20">
+                <button type="button" class="text-black border dark:text-white border-amber-600 hover:bg-orange-500 hover:text-white font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 w-20">
                     Log in
                 </button>
                 <!-- sign up btn -->
-                <button type="button" class="text-black hover:text-orange-500 font-semibold transition-colors duration-200 flex items-center">
+                <button type="button" class="text-black dark:hover:text-orange-500 dark:text-white hover:text-orange-500 font-semibold transition-colors duration-200 flex items-center">
                     Sign up <i class="fa-solid fa-arrow-right ml-1"></i>
                 </button>
             </div>
