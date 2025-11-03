@@ -45,177 +45,171 @@
   </head>
   <body class="theme-transition dark:bg-gray-500">
     <!-- header -->
-    <header class="w-full shadow">
+    <header class="fixed inset-x-0 top-0 z-50">
       <nav
-        class="bg-white dark:bg-gray-500 shadow sticky w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600"
+        class="bg-white dark:bg-gray-800 shadow-sm flex items-center justify-between p-4 lg:px-8"
+        aria-label="Global"
       >
-        <div class="flex flex-wrap items-center justify-between mx-auto p-4">
-          <!-- Logo -->
-          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <div class="flex items-center">
-              <i
-                class="fa-solid fa-house text-orange-500 text-4xl md:text-5xl"
-              ></i>
-              <p
-                class="self-center text-xl md:text-2xl font-semibold whitespace-nowrap ml-2 dark:text-white"
-              >
-                Real <span class="text-orange-500">Estate</span>
-              </p>
-            </div>
+        <!-- Logo -->
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <span class="font-bold text-2xl dark:text-white">Real</span>
+            <span class="text-orange-600 font-bold text-2xl">Estate</span>
           </a>
+        </div>
 
-          <!-- Desktop Navigation - Visible on tablet and larger -->
-          <div class="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
-              class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500"
-              >Home</a
-            >
-            <a
-              href="#"
-              class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500"
-              >Buy</a
-            >
-            <a
-              href="#"
-              class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500"
-              >Rent</a
-            >
-            <a
-              href="#"
-              class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500"
-              >Agent</a
-            >
-            <a
-              href="#"
-              class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 mx-4 py-2 dark:text-white dark:hover:text-orange-500"
-              >About</a
-            >
-          </div>
+        <!-- Desktop menu links -->
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="index.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Home</a
+          >
+          <a
+            href="buy.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Buy</a
+          >
+          <a
+            href="rent.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Rent</a
+          >
+          <a
+            href="agent.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Agent</a
+          >
+          <a
+            href="about_us.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >About</a
+          >
+        </div>
 
-          <!-- Desktop Buttons - Visible on tablet and larger -->
+        <!-- Right-side buttons (desktop) -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center">
+          <!-- Dark/Light Mode Toggle Button -->
+          <button id="theme-toggle" type="button" class="p-2 mr-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg">
+            <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          
+          <a
+            href="log_in.html"
+            class="text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400 p-2 rounded-full text-center"
+            >Log in</a
+          >
+          <a
+            href="sign_up.html"
+            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white dark:border-orange-500 dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-white p-2 rounded-md text-center ml-2"
+            >Sign Up</a
+          >
+        </div>
 
-          <div class="hidden md:flex items-center space-x-4">
-            <!-- toggle btn -->
-            <button
-              type="button"
-              onclick="toggleDarkMode()"
-              class="theme-toggle-btn text-gray-700 dark:text-gray-300 p-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700 theme-transition text-sm px-4 py-2 transition-colors duration-200 flex items-center gap-2"
-              id="theme-toggle"
-            >
-              <span class="sun-icon hidden">☀️</span>
-              <span class="moon-icon">🌙</span>
-              <span class="theme-text text-sm">Dark</span>
-            </button>
-
-            <!-- login btn -->
-            <button
-              type="button"
-              class="text-black border dark:text-white border-amber-600 hover:bg-orange-500 hover:text-white font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 w-20"
-            >
-              Log in
-            </button>
-            <!-- sign up btn -->
-            <button
-              type="button"
-              class="text-black dark:hover:text-orange-500 dark:text-white hover:text-orange-500 font-semibold transition-colors duration-200 flex items-center"
-            >
-              Sign up <i class="fa-solid fa-arrow-right ml-1"></i>
-            </button>
-          </div>
-
-          <!-- Mobile menu button - Visible only on mobile -->
+        <!-- Mobile menu button and theme toggle -->
+        <div class="flex lg:hidden items-center">
+          <!-- Dark/Light Mode Toggle Button (Mobile) -->
+          <button id="theme-toggle-mobile" type="button" class="p-2 mr-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg">
+            <svg id="theme-toggle-dark-icon-mobile" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon-mobile" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          
           <button
-            data-collapse-toggle="navbar-sticky"
+            id="mobile-menu-button"
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-sticky"
-            aria-expanded="false"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700 dark:text-orange-500"
           >
             <span class="sr-only">Open main menu</span>
             <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
+              id="menu-open"
+              class="size-6 block"
               fill="none"
-              viewBox="0 0 17 14"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
             >
               <path
-                stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <svg
+              id="menu-close"
+              class="size-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
         </div>
-
-        <!-- Mobile Menu - Hidden by default, shows on mobile -->
-        <div class="hidden md:hidden" id="navbar-sticky">
-          <div class="px-4 py-2 bg-white border-t border-gray-200">
-            <div class="flex flex-col space-y-3 py-3">
-              <a
-                href="#"
-                class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 py-2"
-                >Home</a
-              >
-              <a
-                href="#"
-                class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 py-2"
-                >Buy</a
-              >
-              <a
-                href="#"
-                class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 py-2"
-                >Rent</a
-              >
-              <a
-                href="#"
-                class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 py-2"
-                >Agent</a
-              >
-              <a
-                href="#"
-                class="text-gray-900 hover:text-orange-500 hover:underline font-semibold transition-colors duration-200 py-2"
-                >About</a
-              >
-
-              <div
-                class="border-t border-gray-200 dark:border-gray-600 pt-4 mt-2"
-              >
-                <!-- toggle btn -->
-                <button
-                  type="button"
-                  onclick="toggleDarkMode()"
-                  class="theme-toggle-btn text-gray-700 dark:text-gray-300 w-full p-2 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700 theme-transition text-sm px-4 py-2 transition-colors duration-200 flex items-center gap-2"
-                  id="theme-toggle"
-                >
-                  <span class="sun-icon hidden">☀️</span>
-                  <span class="moon-icon">🌙</span>
-                  <span class="theme-text text-sm text-center">Dark</span>
-                </button>
-
-                <button
-                  type="button"
-                  class="w-full text-center text-black border border-amber-600 hover:bg-orange-500 hover:text-white font-semibold text-sm px-4 py-2 rounded-full transition-colors duration-200 mb-3"
-                >
-                  Log in
-                </button>
-
-                <button
-                  type="button"
-                  class="w-full text-center text-black hover:text-orange-500 font-semibold transition-colors duration-200 flex items-center justify-center"
-                >
-                  Sign up <i class="fa-solid fa-arrow-right ml-1"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </nav>
+
+      <!-- Mobile dropdown menu (smooth) -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 shadow-md border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="space-y-2 p-4">
+          <a
+            href="index.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Home</a
+          >
+          <a
+            href="buy.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Buy</a
+          >
+          <a
+            href="rent.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Rent</a
+          >
+          <a
+            href="agent.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Agent</a
+          >
+          <a
+            href="about_us.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >About</a
+          >
+          <hr class="dark:border-gray-700" />
+          <a
+            href="log_in.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Log in</a
+          >
+          <a
+            href="sign_up.html"
+            class="block text-lg font-semibold text-orange-700 dark:text-orange-500 border border-orange-700 dark:border-orange-500 rounded-md px-4 py-2 hover:bg-orange-500 hover:text-white dark:hover:bg-orange-500 dark:hover:text-white"
+            >Sign Up</a
+          >
+        </div>
+      </div>
     </header>
 
+      
+               
     <!-- main -->
     <main>
       <section>
