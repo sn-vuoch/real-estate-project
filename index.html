@@ -21,35 +21,50 @@
         class="bg-white shadow-sm flex items-center justify-between p-4 lg:px-8"
         aria-label="Global"
       >
+        <!-- Logo -->
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-
-            <span class="font-bold text-2xl">Real</span
-            ><span class="text-orange-600 font-bold text-2xl"> Estate</span>
+            <span class="font-bold text-2xl">Real</span>
+            <span class="text-orange-600 font-bold text-2xl">Estate</span>
           </a>
         </div>
 
         <!-- Mobile menu button -->
         <div class="flex lg:hidden">
           <button
+            id="mobile-menu-button"
             type="button"
             class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700"
           >
             <span class="sr-only">Open main menu</span>
             <svg
-              class="size-6"
+              id="menu-open"
+              class="size-6 block"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              aria-hidden="true"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              ></path>
+              />
+            </svg>
+            <svg
+              id="menu-close"
+              class="size-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -63,7 +78,7 @@
           >
           <a
             href="buy.html"
-            class="text-lg font-semibold text hover:underline hover:text-orange-700"
+            class="text-lg font-semibold hover:underline hover:text-orange-700"
             >Buy</a
           >
           <a
@@ -83,20 +98,65 @@
           >
         </div>
 
-        <!-- Right-side buttons -->
+        <!-- Right-side buttons (desktop) -->
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="log_in.html"
-            class="text-lg font-semibold hover:text-orange-700 p-2 rounded-full w-25 text-center"
+            class="text-lg font-semibold hover:text-orange-700 p-2 rounded-full text-center"
             >Log in</a
           >
           <a
             href="sign_up.html"
-            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white p-2 rounded-md w-25 text-center"
+            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white p-2 rounded-md text-center ml-2"
             >Sign Up</a
           >
         </div>
       </nav>
+
+      <!-- Mobile dropdown menu (smooth) -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out bg-white shadow-md border-t border-gray-200"
+      >
+        <div class="space-y-2 p-4">
+          <a
+            href="index.html"
+            class="block text-lg font-semibold hover:text-orange-700"
+            >Home</a
+          >
+          <a
+            href="buy.html"
+            class="block text-lg font-semibold hover:text-orange-700"
+            >Buy</a
+          >
+          <a
+            href="rent.html"
+            class="block text-lg font-semibold hover:text-orange-700"
+            >Rent</a
+          >
+          <a
+            href="agent.html"
+            class="block text-lg font-semibold hover:text-orange-700"
+            >Agent</a
+          >
+          <a
+            href="about_us.html"
+            class="block text-lg font-semibold hover:text-orange-700"
+            >About</a
+          >
+          <hr />
+          <a
+            href="log_in.html"
+            class="block text-lg font-semibold hover:text-orange-700"
+            >Log in</a
+          >
+          <a
+            href="sign_up.html"
+            class="block text-lg font-semibold text-orange-700 border border-orange-700 rounded-md px-4 py-2 hover:bg-orange-500 hover:text-white"
+            >Sign Up</a
+          >
+        </div>
+      </div>
     </header>
 
     <!-- main  -->
@@ -724,5 +784,30 @@
         </p>
       </div>
     </footer>
+    <!-- script for dropdown -->
+    <script>
+      // Toggle mobile menu
+      const menuButton = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+      const menuOpen = document.getElementById("menu-open");
+      const menuClose = document.getElementById("menu-close");
+
+      let menuVisible = false;
+
+      menuButton.addEventListener("click", () => {
+        menuVisible = !menuVisible;
+
+        if (menuVisible) {
+          menu.classList.remove("max-h-0", "opacity-0");
+          menu.classList.add("max-h-[500px]", "opacity-100");
+        } else {
+          menu.classList.add("max-h-0", "opacity-0");
+          menu.classList.remove("max-h-[500px]", "opacity-100");
+        }
+
+        menuOpen.classList.toggle("hidden");
+        menuClose.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
