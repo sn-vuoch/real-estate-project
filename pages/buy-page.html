@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Page</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../src/output.css" />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="fixed inset-x-0 top-0 z-50">
+      <nav
+        class="bg-white shadow-sm flex items-center justify-between p-4 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <span class="font-bold text-2xl">Real</span>
+            <span class="text-orange-600 font-bold text-2xl"> Estate</span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop menu links -->
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="index.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            >Home</a
+          >
+          <a
+            href="buy.html"
+            class="text-lg font-semibold text hover:underline hover:text-orange-700"
+            >Buy</a
+          >
+          <a
+            href="rent.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            >Rent</a
+          >
+          <a
+            href="agent.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            >Agent</a
+          >
+          <a
+            href="about_us.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            >About</a
+          >
+        </div>
+
+        <!-- Right-side buttons -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="log_in.html"
+            class="text-lg font-semibold hover:text-orange-700 p-2 rounded-full w-25 text-center"
+            >Log in</a
+          >
+          <a
+            href="sign_up.html"
+            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white p-2 rounded-md w-25 text-center"
+            >Sign Up</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="rounded-2xl">
+        <img
+          class="w-full rounded-2xl p-2"
+          src="../images/image.png"
+          alt="pic"
+        />
+      </div>
+      <div class="mx-2">
+        <nav>
+          <a
+            href="#"
+            class="px-3 py-2 rounded border text-orange-700 bg-white hover:bg-orange-600 hover:text-white transition duration-300"
+            >All</a
+          >
+          <a
+            href="#"
+            class="px-3 py-2 rounded border text-orange-700 bg-white hover:bg-orange-600 hover:text-white transition duration-300"
+            >Villa</a
+          >
+          <a
+            href="#"
+            class="px-3 py-2 rounded border text-orange-700 bg-white hover:bg-orange-600 hover:text-white transition duration-300"
+            >Apartment</a
+          >
+          <a
+            href="#"
+            class="px-3 py-2 rounded border text-orange-700 bg-white hover:bg-orange-600 hover:text-white transition duration-300"
+            >Flat House</a
+          >
+          <a
+            href="#"
+            class="px-3 py-2 rounded border text-orange-700 bg-white hover:bg-orange-600 hover:text-white transition duration-300"
+            >Condo</a
+          >
+        </nav>
+      </div>
+      <section>
+        <!-- Villa -->
+        <div>
+          <h2 class="font-bold p-3">Villa</h2>
+        </div>
+
+        <!-- card -->
+        <section
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2"
+        >
+          <!-- card-1 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse2.mm.bing.net/th/id/OIP.sGSOctOMK2pGBqeBC9Q_-wHaE8?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Villa | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1 living
+              room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$680,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-2 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse3.mm.bing.net/th/id/OIP.B9ZqEM4lmehXjP-CRobIMwHaE8?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Villa | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1 living
+              room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$920,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-3 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse2.mm.bing.net/th/id/OIP.0iDclZaB1rPeNjmC-hpg7wHaEj?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Villa | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1 living
+              room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$600,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-4 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse2.mm.bing.net/th/id/OIP.Q-y-k92-93jkcvrgWLhtBQHaEK?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Villa | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1 living
+              room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$890,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Apartment -->
+        <div>
+          <h2 class="font-bold p-3">Apartment</h2>
+        </div>
+        <!-- card -->
+        <section
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2"
+        >
+          <!-- card-1 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse4.mm.bing.net/th/id/OIP.kmMoG8L_WH6qL7YPPmcaaQHaE6?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Apartment | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1
+              living room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$1,200,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-2 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse1.mm.bing.net/th/id/OIP.UQfeG5YW_3c5AWEbfVMqmQHaE8?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Apartment | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1
+              living room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$1,590,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-3 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse1.mm.bing.net/th/id/OIP.GrwlH8Vh1nHz7_oWW1eUJQHaE8?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Apartment | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1
+              living room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$3,150,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-4 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse2.mm.bing.net/th/id/OIP.XaTseBRoltLsOUlqUVX5KwHaFx?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Apartment | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1
+              living room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$1,320,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Flat House -->
+        <div>
+          <h2 class="font-bold p-3">Flat House</h2>
+        </div>
+        <!-- card -->
+        <section
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2"
+        >
+          <!-- card-1 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse3.mm.bing.net/th/id/OIP.emOlzIPU9BxO2n381_9VhgHaE8?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Flat House | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1
+              living room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$280,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-2 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse4.mm.bing.net/th/id/OIP.b3GDyVLA38BU4IU-zJMzFAHaET?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Flat House | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1
+              living room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$390,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-3 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse3.mm.bing.net/th/id/OIP.husqHbIen7oTqnDKFC9J5QHaDV?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Flat House | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1
+              living room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$350,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-4 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse1.mm.bing.net/th/id/OIP.Wacsg8yjDHezhegn-dnxigHaE6?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Flat House | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1
+              living room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$320,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- Condo -->
+        <div>
+          <h2 class="font-bold p-3">Condo</h2>
+        </div>
+        <!-- card -->
+        <section
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2"
+        >
+          <!-- card-1 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse1.mm.bing.net/th/id/OIP.zGMdCKnFIes2WkTzyVvXlgHaEK?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Condo | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1 living
+              room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$230,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-2 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse3.mm.bing.net/th/id/OIP.9rYZIJIYTDuyCYd0_eD5-wHaE8?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Condo | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1 living
+              room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$250,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-3 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse3.mm.bing.net/th/id/OIP.h8fZeMdnGyJSrXjUJuyleAAAAA?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Condo | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1 living
+              room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$300,000</h2>
+            <!-- date -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+
+          <!-- card-4 -->
+          <div class="bg-gray-200 row-span-1 rounded-2xl mx-2 pb-2">
+            <!-- img -->
+            <img
+              class="w-full h-[200px] rounded-t-2xl"
+              src="https://tse2.mm.bing.net/th/id/OIP.J7MT8iJT0nDBArKF6WadkwHaE8?pid=Api&P=0&h=220"
+              alt=""
+            />
+            <!-- title -->
+            <h3 class="font-bold text-2xl mx-3">2 bedroom luxury ...</h3>
+            <!-- discription -->
+            <a class="flex">
+              <i class="text-orange-700 my-1 mx-4 fa-solid fa-location-dot"></i>
+              <p class="line-clamp-1">Toul Kork, Phnom Penh</p>
+            </a>
+            <p class="line-clamp-1 mx-4">
+              Condo | 2 bedrooms | 1 pool | 1 kitchen | 3 bathrooms | 1 living
+              room | 1 office room
+            </p>
+            <h2 class="font-bold text-orange-600 text-2xl mx-3">$270,000</h2>
+            <!-- line -->
+            <div class="border-t border-gray-500 my-4 mx-4"></div>
+            <!-- date -->
+            <div class="flex justify-between">
+              <div class="mx-4">2025-10-20</div>
+              <i
+                class="mx-4 my-1 text-gray-500 hover:text-orange-600 fa-solid fa-heart"
+              ></i>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="p-8 w-full mt-20 bg-gray-200">
+      <div
+        class="flex flex-col md:flex-row md:justify-between md:items-start gap-10 max-w-7xl mx-auto"
+      >
+        <!-- Left Logo and Info -->
+        <div class="md:w-1/2">
+          <span class="font-bold text-2xl">Real</span>
+          <span class="text-orange-600 font-bold text-2xl"> Estate</span>
+          <p class="text-lg text-gray-800 capitalize">
+            Where Every Key Unlocks a New Chapter
+          </p>
+          <hr class="border-0 h-[1px] bg-gray-300 mt-5 w-[55%]" />
+          <div class="flex mt-4 space-x-4 text-gray-800">
+            <a href="#" title="Facebook">
+              <i class="fa-brands fa-facebook hover:text-orange-500"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <a href="#" title="Instagram">
+              <i
+                class="fa-brands fa-square-instagram hover:text-orange-500"
+              ></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="#" title="Twitter">
+              <i class="fa-brands fa-x-twitter hover:text-orange-500"></i>
+              <span class="sr-only">Twitter</span></a
+            >
+            <a href="#" title="YouTube">
+              <i class="fa-brands fa-youtube hover:text-orange-500"></i>
+              <span class="sr-only">YouTube</span>
+            </a>
+            <a href="#" title="GitHub">
+              <i class="fa-brands fa-github hover:text-orange-500"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Grid Navigation -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left text-sm text-gray-500 w-full md:w-1/2"
+        >
+          <!-- Column 1 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Navigation</h3>
+            <ul>
+              <li><a href="buy.html" class="hover:text-black">Buy</a></li>
+              <li><a href="rent.html" class="hover:text-black">Rent</a></li>
+              <li><a href="agent.html" class="hover:text-black">Agent</a></li>
+              <li>
+                <a href="about_us.html" class="hover:text-black">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Support</h3>
+            <ul>
+              <li><a href="#" class="hover:text-black">FAQ</a></li>
+              <li><a href="#" class="hover:text-black">Service</a></li>
+              <li><a href="#" class="hover:text-black">Guide</a></li>
+              <li><a href="#" class="hover:text-black">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Legal</h3>
+            <ul>
+              <li><a href="#" class="hover:text-black">Term of service</a></li>
+              <li><a href="#" class="hover:text-black">Privacy policy</a></li>
+              <li><a href="#" class="hover:text-black">License</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 mx-8 border-0 h-[1px] bg-gray-300" />
+      <div class="text-center">
+        <p class="text-gray-800 text-sm">
+          © 2024 Real Estate, All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
