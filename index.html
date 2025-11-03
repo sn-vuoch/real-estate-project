@@ -1,645 +1,1019 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent page</title>
+    <!-- SEO implementation -->
+      <meta name="description" content="Find your next home with our real estate rental listings. Browse apartments, condos, and houses for rent with detailed photos, prices, and locations." />
+      <meta name="keywords" content="real estate, property for rent, houses for rent, apartments for rent, condos for rent, rental listings, home rentals, property rental, rent property, real estate rentals" />
+    
+      <meta property="og:title" content="The rent page of real Estate">
+      <meta property="og:description" content="Find your ideal home or apartment for rent. Explore verified real estate listings with prices, photos, and detailed property information." />
+
+     <!-- Favicon -->
+     <link rel="shortcut icon" href="https://content.jdmagicbox.com/v2/comp/mahabubnagar/m1/9999p8542.8542.170515100525.r1m1/catalogue/mahendar-real-estates-shadnagar-mahabubnagar-real-estate-agents-6pvjg7ty7i-250.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="../src/output.css" />
-    <!-- font-awesome cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header class="fixed inset-x-0 top-0 z-50">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   
+
+   <!-- script config -->
+<script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
+     
+</head>
+<body  class="theme-transition dark:bg-gray-500">
+    
+    <!-- header -->
+     <header class="fixed inset-x-0 top-0 z-50">
       <nav
-        class="bg-white shadow-sm flex items-center justify-between p-4 lg:px-8"
+        class="bg-white dark:bg-gray-800 shadow-sm flex items-center justify-between p-4 lg:px-8"
         aria-label="Global"
       >
+        <!-- Logo -->
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-
-            <span class="font-bold text-2xl">Real</span
-            ><span class="text-orange-600 font-bold text-2xl"> Estate</span>
+            <span class="font-bold text-2xl dark:text-white">Real</span>
+            <span class="text-orange-600 font-bold text-2xl">Estate</span>
           </a>
-        </div>
-
-        <!-- Mobile menu button -->
-        <div class="flex lg:hidden">
-          <button
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              ></path>
-            </svg>
-          </button>
         </div>
 
         <!-- Desktop menu links -->
         <div class="hidden lg:flex lg:gap-x-12">
           <a
             href="index.html"
-            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >Home</a
           >
           <a
-            href="./pages/buy-page.html"
-            class="text-lg font-semibold text hover:underline hover:text-orange-700"
+            href="buy.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >Buy</a
           >
           <a
             href="rent.html"
-            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >Rent</a
           >
           <a
             href="agent.html"
-            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >Agent</a
           >
           <a
             href="about_us.html"
-            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >About</a
           >
         </div>
 
-        <!-- Right-side buttons -->
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <!-- Right-side buttons (desktop) -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center">
+          <!-- Dark/Light Mode Toggle Button -->
+          <button id="theme-toggle" type="button" class="p-2 mr-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg">
+            <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          
           <a
-            href="./pages/login.html"
-            class="text-lg font-semibold hover:text-orange-700 p-2 rounded-full w-25 text-center"
+            href="log_in.html"
+            class="text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400 p-2 rounded-full text-center"
             >Log in</a
           >
           <a
-            href="./pages/sign-up.html"
-            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white p-2 rounded-md w-25 text-center"
+            href="sign_up.html"
+            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white dark:border-orange-500 dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-white p-2 rounded-md text-center ml-2"
             >Sign Up</a
           >
         </div>
+
+        <!-- Mobile menu button and theme toggle -->
+        <div class="flex lg:hidden items-center">
+          <!-- Dark/Light Mode Toggle Button (Mobile) -->
+          <button id="theme-toggle-mobile" type="button" class="p-2 mr-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg">
+            <svg id="theme-toggle-dark-icon-mobile" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon-mobile" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700 dark:text-orange-500"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              id="menu-open"
+              class="size-6 block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <svg
+              id="menu-close"
+              class="size-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
+
+      <!-- Mobile dropdown menu (smooth) -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 shadow-md border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="space-y-2 p-4">
+          <a
+            href="index.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Home</a
+          >
+          <a
+            href="buy.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Buy</a
+          >
+          <a
+            href="rent.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Rent</a
+          >
+          <a
+            href="agent.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Agent</a
+          >
+          <a
+            href="about_us.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >About</a
+          >
+          <hr class="dark:border-gray-700" />
+          <a
+            href="log_in.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Log in</a
+          >
+          <a
+            href="sign_up.html"
+            class="block text-lg font-semibold text-orange-700 dark:text-orange-500 border border-orange-700 dark:border-orange-500 rounded-md px-4 py-2 hover:bg-orange-500 hover:text-white dark:hover:bg-orange-500 dark:hover:text-white"
+            >Sign Up</a
+          >
+        </div>
+      </div>
     </header>
 
-    <!-- main  -->
-    <main>
-      <div
-        class="relative isolate px-2 pt-14 lg:px-8 bg-no-repeat bg-cover w-full h-full bg-[url('/images/banner2.jpg')]"
-      >
-        <div class="mx-auto max-w-3xl py-32 sm:py-48">
-          <div class="text-center">
-            <h1
-              class="text-4xl font-semibold tracking-tight text-balance capitalize text-gray-100 sm:text-7xl"
-            >
-              Discover Your Perfect Property today
-            </h1>
-            <br />
-            <p class="mt-2 mx-20 text-lg font-medium text-pretty sm:text-xl/8Y">
-              Real estate properties for sale and <br />rent in over 12
-              countries
-            </p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                class="text-md font-semibold border text-white hover:bg-orange-500 hover:text-white p-2 rounded-md w-25 text-center"
-                >Get started</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- main -->
+     <main>
+        <section  >
 
-      <!--  -->
-      <div class="container mx-auto p-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div
-            class="bg-gray-100 rounded-2xl p-8 flex flex-col justify-center items-start h-64 sm:h-auto"
-          >
-            <p class="text-5xl sm:text-6xl font-semibold text-gray-900 mb-4">
-              10 M+
-            </p>
-            <p class="text-lg sm:text-xl text-gray-700">Happy Customers</p>
-          </div>
+       <img class="h-auto max-w-full p-5 " src="./image/Apartment-Banner-2.png" alt="image description">
+        </section>
+        <section  >
+            <div class="flex-wrap px-3 py-4 justify-center dark:text-white  ">
+                <a href="#"><button type="button" class="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white w-[70px] h-10 m-4 rounded font-bold  " >All</button></a>
+               <a href="#villa"> <button type="button" class="border  border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white w-[70px] h-10 gap-3 rounded  font-bold"  >Villa</button></a>
+                <a href="#apartment"><button type="button" class="border  border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white w-[100px] h-10 gap-3 rounded  font-bold">Apartment</button></a>
+                <a href="#flat house"><button type="button" class="border  border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white w-[100px] h-10 gap-3 rounded  font-bold">Flat House</button></a>
+                <a href="#condo"><button type="button" class="border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white w-20 h-10 gap-3 rounded  font-bold ">Condo</button></a>
+            </div>
+ 
 
-          <div class="relative rounded-2xl overflow-hidden h-64 sm:h-auto">
-            <img
-              src="./images/modern-house-with-garage-and-car.jpg"
-              alt="Elegant Properties"
-              class="absolute inset-0 w-full h-full object-cover"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"
-            ></div>
-            <div class="relative p-8 flex flex-col justify-end h-full">
-              <p class="text-5xl sm:text-6xl font-semibold text-white mb-4">
-                12 K+
-              </p>
-              <p class="text-lg sm:text-xl text-white">Elegant properties</p>
+        </section>
+        <!-- condo -->
+         <div  id="condo">
+                 <p class="m-5 font-bold text-2xl p-3 dark:text-white">Condo</p>
             </div>
-          </div>
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-4 m-5 ">
+           
+   <div data-aos="fade-up"
+     data-aos-duration="600">
+       
+   <div  class="w-full h-[450px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                     src="./image/livingroom.jpg" 
+                     alt="luxury condo" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$350M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> 
+   <div data-aos="fade-up"
+     data-aos-duration="800"> 
+    <div class="w-full h-[450px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                     src="./image/living-room2.jpg" 
+                     alt="luxury condo" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$350M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+     <div data-aos="fade-up"
+     data-aos-duration="1000"> 
+    <div class="w-full h-[450px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                     src="./image/bedroom.webp" 
+                     alt="luxury condo" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$350M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+     <div data-aos="fade-up"
+     data-aos-duration="1500"> 
+    <div class="w-full h-[450px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                     src="./image/kitchen.jpg" 
+                     alt="luxury condo" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$350M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+ 
+</section>
 
-          <div
-            class="bg-orange-600 rounded-2xl p-8 flex flex-col justify-center items-start h-64 sm:h-auto"
-          >
-            <p class="text-5xl sm:text-6xl font-semibold text-white mb-4">4+</p>
-            <div class="flex items-center space-x-2">
-              <div class="bg-white p-2 rounded-lg">
-                <!-- <svg
-                  class="w-8 h-8 text-orange-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 2a1 1 0 00-1 1v1h2V3a1 1 0 00-1-1zM5 4a1 1 0 00-1 1v7.586l-.293.293a1 1 0 000 1.414l.707.707A1 1 0 005.707 16H14.293a1 1 0 00.707-.293l.707-.707a1 1 0 000-1.414l-.293-.293V5a1 1 0 00-1-1h-2V3a1 1 0 00-2 0v1H7V3a1 1 0 00-2 0v1zM4 17a1 1 0 001 1h10a1 1 0 001-1v-1a1 1 0 00-1-1H5a1 1 0 00-1 1v1z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg> -->
-              </div>
-              <span class="text-4xl sm:text-5xl font-semibold text-white"
-                >Real<span class="font-normal">Estate</span></span
-              >
+        <!-- apartment -->
+           <div id="apartment">
+                 <p class="m-5 font-bold text-2xl p-3 dark:text-white">Apartment</p>
             </div>
-            <p class="text-lg sm:text-xl text-white mt-4">Years of service</p>
-          </div>
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-4 m-5 ">
+           
+      <div data-aos="fade-up"
+     data-aos-duration="600">
+    
+   <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/apartment1.jpeg"
+                     alt="luxury apartment" />
+            </a>
+                       
         </div>
-      </div>
-      <!-- trending properties -->
-      <section class="py-4 sm:py-8">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto lg:mx-0">
-            <h2
-              class="text-2xl font-semibold tracking-tight text-center text-pretty text-gray-900 sm:text-3xl capitalize"
-            >
-              Most popular home design
-            </h2>
-            <p class="my-2 text-md/8 text-center text-gray-600">
-              What Buyers Are Loving Now
-            </p>
-            <br />
-          </div>
-          <div
-            class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-row-auto w-full h-auto gap-4 shadow-xs overflow-hidden"
-          >
-            <div class="col-span-1 sm:col-span-2 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://marbella1.es/cdn/shop/articles/what-luxury-villas-will-be-ready-in-2025.png?v=1734251278&amp;width=1600"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-sm"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Luxury Villas
-                </h3>
-              </a>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://preciseirondoors.com/wp-content/uploads/2021/12/modern-house-with-garage-and-car.jpg"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-sm"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Modern Minimalist Homes
-                </h3>
-              </a>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://cdn-klmof.nitrocdn.com/qwEKzfZlawVbivmwyMhZsSeDSDXrDIQn/assets/images/optimized/rev-c3c7455/designbuild.villas/wp-content/uploads/2024/10/67649-1.jpg"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-sm"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Smart Homes
-                </h3>
-              </a>
-            </div>
-            <div class="col-span-1 sm:col-span-2 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://molathzsmarthome.com/wp-content/uploads/2022/08/Home-Tech-6-1024x547.jpg"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-lg"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Smart Homes
-                </h3>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Featured Properties -->
-      <section class="py-4 sm:py-8">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto lg:mx-0">
-            <h2
-              class="text-2xl text-center font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl capitalize mb-2"
-            >
-              Featured Properties
-            </h2>
-            <p class="my-2 text-md/8 text-center text-gray-600">
-              Find your home here
-            </p>
-            <br />
-          </div>
-          <div
-            class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-row-auto w-full h-auto gap-4 shadow-xs overflow-hidden"
-          >
-            <div class="col-span-1 sm:col-span-2 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://construction-property.com/wp-content/uploads/2020/07/Grand-PP1.jpg"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-sm"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Villa
-                </h3>
-              </a>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/163059318.jpg?k=72ab2f3501a693bf43e3fedebc50ffda172ddf13f1938eb2d5187c2e29de5cbc&amp;o=&amp;hp=1"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-sm"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Apartment
-                </h3>
-              </a>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://sokharealestate.com.kh/assets/img/projects/project_3/flat_house_e2/crown_flat_house-retina.jpg"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-sm"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Flat House
-                </h3>
-              </a>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://www.globallistings.com/listings/images/3614768/1531910519.jpg"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-lg"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Condo
-                </h3>
-              </a>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative">
-              <a href="#" class=""
-                ><img
-                  src="https://www.totalhomeenterprise.com/images/1560579063.Twin%20Villa%2003.jpg"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-lg"
-                />
-                <h3
-                  class="text-xl font-semibold text-white absolute top-2 left-2"
-                >
-                  Twin Villa
-                </h3>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- favorite location -->
-      <section class="py-4 sm:py-8">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div>
-            <h2
-              class="text-2xl text-center font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl capitalize mb-2"
-            >
-              Favorite Location
-            </h2>
-            <br />
-          </div>
-          <div
-            class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-row-auto w-full h-auto gap-4 overflow-hidden"
-          >
-            <div class="col-span-1 sm:col-span-1 relative rounded-lg bg-white">
-              <a href="#" class=""
-                ><img
-                  src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/b8/be/0f.jpg"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-lg"
-                />
-                <h3
-                  class="text-2xl font-bold shadow-xs text-white absolute top-30 left-19"
-                >
-                  Phnom Penh
-                </h3>
-              </a>
-              <div class="flex justify-between p-4 text-center">
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Rent</h3>
-                  <p class="text-xl font-bold text-orange-600">12353</p>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Sale</h3>
-                  <p class="text-xl font-bold text-orange-600">2387</p>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Short Stay</h3>
-                  <p class="text-xl font-bold text-orange-600">20</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative rounded-lg bg-white">
-              <a href="#" class=""
-                ><img
-                  src="https://i0.wp.com/thalias.com.kh/wp-content/uploads/2022/11/The-Best-of-Siem-Reap-at-your-Fingertips.jpeg?fit=1180%2C787&amp;ssl=1"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-lg"
-                />
-                <h3
-                  class="text-2xl font-bold shadow-xs text-white absolute top-30 left-21"
-                >
-                  Siem Reap
-                </h3>
-              </a>
-              <div class="flex justify-between p-4 text-center">
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Rent</h3>
-                  <p class="text-xl font-bold text-orange-600">8653</p>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Sale</h3>
-                  <p class="text-xl font-bold text-orange-600">98</p>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Short Stay</h3>
-                  <p class="text-xl font-bold text-orange-600">12</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative rounded-lg bg-white">
-              <a href="#" class=""
-                ><img
-                  src="https://visitlocaltravel.com/blog/wp-content/uploads/2024/01/Sokha-Beach-Sihanoukville-3.png"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-lg"
-                />
-                <h3
-                  class="text-2xl font-bold shadow-xs text-white absolute top-30 left-15"
-                >
-                  Preah Sihanouk
-                </h3>
-              </a>
-              <div class="flex justify-between p-4 text-center">
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Rent</h3>
-                  <p class="text-xl font-bold text-orange-600">1228</p>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Sale</h3>
-                  <p class="text-xl font-bold text-orange-600">56</p>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Short Stay</h3>
-                  <p class="text-xl font-bold text-orange-600">9</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-span-1 sm:col-span-1 relative rounded-lg bg-white">
-              <a href="#" class=""
-                ><img
-                  src="https://media.asiaone.com/sites/default/files/styles/article_top_image/public/original_images/Apr2024/140424_kampot_ig.jpg?itok=nFu0VoBZ"
-                  alt=""
-                  class="w-full h-72 object-cover rounded-lg"
-                />
-                <h3
-                  class="text-2xl font-bold shadow-xs text-white absolute top-30 left-23"
-                >
-                  Kampot
-                </h3>
-              </a>
-              <div class="flex justify-between p-4 text-center">
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Rent</h3>
-                  <p class="text-xl font-bold text-orange-600">176</p>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Sale</h3>
-                  <p class="text-xl font-bold text-orange-600">61</p>
-                </div>
-                <div>
-                  <h3 class="text-sm font-medium text-gray-800">Short Stay</h3>
-                  <p class="text-xl font-bold text-orange-600">2</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Testimonil -->
-      <section class="py-24 sm:py-8">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2
-              class="text-2xl tracking-tight text-pretty text-gray-900 sm:text-5xl"
-            >
-              What our clients say
-            </h2>
-            <p class="mt-2 text-lg/8 text-gray-600">
-              Learn how our customers feedback about our services.
-            </p>
-          </div>
-          <div
-            class="mx-auto mt-5 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-          >
-            <article
-              class="flex max-w-xl flex-col items-start justify-between border border-gray-200 p-4 rounded-xl"
-            >
-              <div class="flex items-center gap-x-4 text-xs">
-                <time datetime="2020-03-16" class="text-gray-500"
-                  >Apr 30, 2020</time
-                >
-                <a
-                  href="#"
-                  class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                  >Khan Sen Sok</a
-                >
-              </div>
-              <div class="group relative">
-                <h3
-                  class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"
-                >
-                  <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Reliable website
-                  </a>
-                </h3>
-                <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-                  <i
-                    >“As a first-time buyer, I was nervous, but the website made
-                    everything simple. The filters helped me narrow down exactly
-                    what I needed. Great experience!”</i
-                  >
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
                 </p>
-              </div>
-              <div class="relative mt-8 flex items-center gap-x-4">
-                <img
-                  src="./images/person1.jpg"
-                  alt=""
-                  class="size-10 rounded-full bg-gray-50"
-                />
-                <div class="text-sm/6">
-                  <p class="font-semibold text-gray-900">
-                    <a href="#">
-                      <span class="absolute inset-0"></span>
-                      Kanika Sophal
-                    </a>
-                  </p>
-                  <p class="text-gray-600">Financial Consulter / ABA</p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$850M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
                 </div>
-              </div>
-            </article>
-            <article
-              class="flex max-w-xl flex-col items-start justify-between border border-gray-200 p-4 rounded-xl"
-            >
-              <div class="flex items-center gap-x-4 text-xs">
-                <time datetime="2020-03-16" class="text-gray-500"
-                  >Oct 25, 2020</time
-                >
-                <a
-                  href="#"
-                  class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                  >Khan Toul Kork</a
-                >
-              </div>
-              <div class="group relative">
-                <h3
-                  class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"
-                >
-                  <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Various Choice
-                  </a>
-                </h3>
-                <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-                  <i
-                    >“I found my dream home in just three days! The listings
-                    were clear, updated, and the agents were super responsive.
-                    Highly recommend this platform!”</i
-                  >
-                </p>
-              </div>
-              <div class="relative mt-8 flex items-center gap-x-4">
-                <img
-                  src="./images/person3.jpg"
-                  alt=""
-                  class="size-10 rounded-full bg-gray-50"
-                />
-                <div class="text-sm/6">
-                  <p class="font-semibold text-gray-900">
-                    <a href="#">
-                      <span class="absolute inset-0"></span>
-                      Channaro Ponleu
-                    </a>
-                  </p>
-                  <p class="text-gray-600">Professor / RUPP</p>
-                </div>
-              </div>
-            </article>
-            <article
-              class="flex max-w-xl flex-col items-start justify-between border border-gray-200 p-4 rounded-xl"
-            >
-              <div class="flex items-center gap-x-4 text-xs">
-                <time datetime="2020-03-16" class="text-gray-500"
-                  >May 18, 2020</time
-                >
-                <a
-                  href="#"
-                  class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                  >Khan 7 Makara</a
-                >
-              </div>
-              <div class="group relative">
-                <h3
-                  class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600"
-                >
-                  <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Smooth!
-                  </a>
-                </h3>
-                <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-                  <i
-                    >“Smooth process from start to finish. I even got a virtual
-                    tour before visiting in person. I’ll definitely use this
-                    site again if I decide to move!”</i
-                  >
-                </p>
-              </div>
-              <div class="relative mt-8 flex items-center gap-x-4">
-                <img
-                  src="./images/person2.jpg"
-                  alt=""
-                  class="size-10 rounded-full bg-gray-50"
-                />
-                <div class="text-sm/6">
-                  <p class="font-semibold text-gray-900">
-                    <a href="#">
-                      <span class="absolute inset-0"></span>
-                      Piseth Mao
-                    </a>
-                  </p>
-                  <p class="text-gray-600">IT Manager / ACLEDA</p>
-                </div>
-              </div>
-            </article>
-          </div>
+            </div>
         </div>
-      </section>
-    </main>
-    <!-- footer -->
+    </div>
+    </div> 
+    <div data-aos="fade-up"
+     data-aos-duration="800">
+    <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/apartment2.jpeg"
+                     alt="luxury apartment" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$850M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div> 
+      <div data-aos="fade-up"
+     data-aos-duration="1000">
+    <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/apartment3.jpeg"
+                     alt="luxury apartment" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$850M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div> 
+      <div data-aos="fade-up"
+     data-aos-duration="1500">
+    <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg"
+                src="./image/apartment4.avif" 
+                     alt="luxury apartment" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$850M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div> 
+</section>
+
+
+        <!-- flat house -->
+       <div id="flat house">
+                 <p class="m-5 font-bold text-2xl p-3 dark:text-white">Flat House</p>
+            </div>
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-4 m-5 ">
+           
+           <div data-aos="fade-up"
+     data-aos-duration="600"> 
+   <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg"
+                src="./image/flat-house1.webp" 
+                     alt="luxury flat house" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$300M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+     <div data-aos="fade-up"
+     data-aos-duration="800">
+      <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/flat-house2.webp"
+
+                     alt="luxury flat house" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$300M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+   <div data-aos="fade-up"
+     data-aos-duration="1000">
+    <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/Flat-house3.jpg"
+                     alt="luxury flat house" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$420M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+     <div data-aos="fade-up"
+     data-aos-duration="1500">
+    <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/flat-house4.webp"
+\                     alt="luxury flat house" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$360M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+
+</section>
+
+
+       <!-- villa -->
+       <div id="villa">
+                 <p class="m-5 font-bold text-2xl p-3 dark:text-white">Villa</p>
+            </div>
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-4 m-5 " >
+           
+           
+   <div data-aos="fade-up"
+     data-aos-duration="600">
+
+    <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/villa1.avif"
+
+                     alt="luxury villa" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$1,100M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+
+     <div data-aos="fade-up"
+     data-aos-duration="800">
+
+     <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg"
+                src="./image/villa2.jpg" 
+                     alt="luxury villa" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$800M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+
+     <div data-aos="fade-up"
+     data-aos-duration="1000">
+
+      <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/villa3.jpg"
+
+                     alt="luxury villa" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$980M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+
+     <div data-aos="fade-up"
+     data-aos-duration="1500">
+
+    <div class="w-full h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mx-auto hover:shadow-md transition-shadow duration-300">
+        <!-- Image -->
+        <div>
+            <a href="#">
+                <img class="w-full h-52 sm:h-56 md:h-52 lg:h-56 object-cover rounded-t-lg" 
+                src="./image/villa4.webp"
+                     alt="luxury villa" />
+            </a>
+                       
+        </div>
+         
+        <!-- Card Content -->
+        <div class="px-4 sm:px-5 pb-4 sm:pb-5">
+            <a href="#">
+               
+                <!-- Title -->
+                <h4 class="text-lg sm:text-xl font-semibold tracking-tight text-gray-900 dark:text-white line-clamp-1 mt-3 mb-2">
+                    2 Bedroom Luxury The master bedroom provides a luxurious retreat with a king-sized bed area
+                </h4>
+                
+                <!-- Location Info -->
+                <p class="text-sm text-gray-500 dark:text-gray-300 line-clamp-2 mb-3">
+                    <i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 
+                    Chroy Changvar, Phnom Penh condo | 2 bedroom | 1 pool | 2 bathrooms
+                </p>
+                <!-- Price -->
+                <h5 class="text-2xl font-bold text-orange-500 mb-3">$1500M</h5>
+            </a>
+            
+            <hr class="mb-3 dark:border-gray-600">
+            
+            <!-- Date and Actions -->
+            <div class="flex justify-between items-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">2025-10-17</p>
+                
+               <!-- heart icon -->
+                <div class="flex space-x-2">
+                    <button class="text-gray-400 text-lg hover:text-orange-500 transition-colors duration-200">
+                     <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+</section>
+     </main>
+     
+
+ <!-- footer -->
     <footer class="p-8 w-full mt-20 bg-gray-200">
       <div
         class="flex flex-col md:flex-row md:justify-between md:items-start gap-10 max-w-7xl mx-auto"
@@ -651,7 +1025,7 @@
           <p class="text-lg text-gray-800 capitalize">
             Where Every Key Unlocks a New Chapter
           </p>
-          <hr class="border-0 h-[1px] bg-gray-300 mt-5 w-[55%]" />
+          <hr class="border-0 h-px bg-gray-300 mt-5 w-[55%]" />
           <div class="flex mt-4 space-x-4 text-gray-800">
             <a href="#" title="Facebook"
               ><i class="fa-brands fa-facebook hover:text-orange-500"></i
@@ -717,12 +1091,24 @@
           </div>
         </div>
       </div>
-      <hr class="my-6 mx-8 border-0 h-[1px] bg-gray-300" />
+      <hr class="my-6 mx-8 border-0 h-px bg-gray-300" />
       <div class="text-center">
         <p class="text-gray-800 text-sm">
           © 2024 Real Estate, All rights reserved.
         </p>
       </div>
     </footer>
-  </body>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- script of spaghetti.js -->
+    <script src="spaghetti.js"></script>
+   <script>
+  AOS.init();
+</script>
+
+</body>
+ 
 </html>
