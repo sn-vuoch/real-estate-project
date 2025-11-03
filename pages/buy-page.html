@@ -14,90 +14,180 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- fav icon -->
+     <link rel="shortcut icon" href="https://content.jdmagicbox.com/v2/comp/mahabubnagar/m1/9999p8542.8542.170515100525.r1m1/catalogue/mahendar-real-estates-shadnagar-mahabubnagar-real-estate-agents-6pvjg7ty7i-250.jpg" type="image/x-icon">
+
+     <!-- script config -->
+<script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: 'class' };
+    </script>
   </head>
-  <body>
+  <body class="theme-transition dark:bg-gray-500">
     <!-- header -->
-    <header class="fixed inset-x-0 top-0 z-50">
+  <header class="fixed inset-x-0 top-0 z-50">
       <nav
-        class="bg-white shadow-sm flex items-center justify-between p-4 lg:px-8"
+        class="bg-white dark:bg-gray-800 shadow-sm flex items-center justify-between p-4 lg:px-8"
         aria-label="Global"
       >
+        <!-- Logo -->
         <div class="flex lg:flex-1">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <span class="font-bold text-2xl">Real</span>
-            <span class="text-orange-600 font-bold text-2xl"> Estate</span>
+            <span class="font-bold text-2xl dark:text-white">Real</span>
+            <span class="text-orange-600 font-bold text-2xl">Estate</span>
           </a>
-        </div>
-
-        <!-- Mobile menu button -->
-        <div class="flex lg:hidden">
-          <button
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              ></path>
-            </svg>
-          </button>
         </div>
 
         <!-- Desktop menu links -->
         <div class="hidden lg:flex lg:gap-x-12">
           <a
-            href="../index.html"
-            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            href="index.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >Home</a
           >
           <a
-            href="buy-page.html"
-            class="text-lg font-semibold text hover:underline hover:text-orange-700"
+            href="buy.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >Buy</a
           >
           <a
-            href="./rent.html"
-            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            href="rent.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >Rent</a
           >
           <a
             href="agent.html"
-            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >Agent</a
           >
           <a
             href="about_us.html"
-            class="text-lg font-semibold hover:underline hover:text-orange-700"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
             >About</a
           >
         </div>
 
-        <!-- Right-side buttons -->
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <!-- Right-side buttons (desktop) -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center">
+          <!-- Dark/Light Mode Toggle Button -->
+          <button id="theme-toggle" type="button" class="p-2 mr-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg">
+            <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          
           <a
-            href="./login.html"
-            class="text-lg font-semibold hover:text-orange-700 p-2 rounded-full w-25 text-center"
+            href="log_in.html"
+            class="text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400 p-2 rounded-full text-center"
             >Log in</a
           >
           <a
-            href="./sign-up.html"
-            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white p-2 rounded-md w-25 text-center"
+            href="sign_up.html"
+            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white dark:border-orange-500 dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-white p-2 rounded-md text-center ml-2"
             >Sign Up</a
           >
         </div>
+
+        <!-- Mobile menu button and theme toggle -->
+        <div class="flex lg:hidden items-center">
+          <!-- Dark/Light Mode Toggle Button (Mobile) -->
+          <button id="theme-toggle-mobile" type="button" class="p-2 mr-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg">
+            <svg id="theme-toggle-dark-icon-mobile" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon-mobile" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700 dark:text-orange-500"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              id="menu-open"
+              class="size-6 block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <svg
+              id="menu-close"
+              class="size-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
+
+      <!-- Mobile dropdown menu (smooth) -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 shadow-md border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="space-y-2 p-4">
+          <a
+            href="index.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Home</a
+          >
+          <a
+            href="buy.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Buy</a
+          >
+          <a
+            href="rent.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Rent</a
+          >
+          <a
+            href="agent.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Agent</a
+          >
+          <a
+            href="about_us.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >About</a
+          >
+          <hr class="dark:border-gray-700" />
+          <a
+            href="log_in.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Log in</a
+          >
+          <a
+            href="sign_up.html"
+            class="block text-lg font-semibold text-orange-700 dark:text-orange-500 border border-orange-700 dark:border-orange-500 rounded-md px-4 py-2 hover:bg-orange-500 hover:text-white dark:hover:bg-orange-500 dark:hover:text-white"
+            >Sign Up</a
+          >
+        </div>
+      </div>
     </header>
+
 
     <!-- main -->
     <main>
@@ -743,5 +833,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="spaghetti.js"></script>
   </body>
 </html>
