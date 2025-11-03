@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>home</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="../src/output.css" />
+        <!-- font-awesome cdn -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+      </head>
+      <body>
+        <header class="fixed inset-x-0 top-0 z-50">
+          <nav
+            class="bg-white shadow-sm flex items-center justify-between p-4 lg:px-8"
+            aria-label="Global"
+          >
+            <div class="flex lg:flex-1">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+
+                <span class="font-bold text-2xl">Real</span
+                ><span class="text-orange-600 font-bold text-2xl"> Estate</span>
+              </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg
+                  class="size-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            <!-- Desktop menu links -->
+            <div class="hidden lg:flex lg:gap-x-12">
+              <a
+                href="index.html"
+                class="text-lg font-semibold hover:underline hover:text-orange-700"
+                >Home</a
+              >
+              <a
+                href="buy.html"
+                class="text-lg font-semibold text hover:underline hover:text-orange-700"
+                >Buy</a
+              >
+              <a
+                href="rent.html"
+                class="text-lg font-semibold hover:underline hover:text-orange-700"
+                >Rent</a
+              >
+              <a
+                href="agent.html"
+                class="text-lg font-semibold hover:underline hover:text-orange-700"
+                >Agent</a
+              >
+              <a
+                href="about_us.html"
+                class="text-lg font-semibold hover:underline hover:text-orange-700"
+                >About</a
+              >
+            </div>
+
+            <!-- Right-side buttons -->
+            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+              <a
+                href="log_in.html"
+                class="text-lg font-semibold hover:text-orange-700 p-2 rounded-full w-25 text-center"
+                >Log in</a
+              >
+              <a
+                href="sign_up.html"
+                class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white p-2 rounded-md w-25 text-center"
+                >Sign Up</a
+              >
+            </div>
+          </nav>
+
+          <main>
+            <article class="w-lg bg-gray-100 p-10 m-auto mt-9 rounded-sm">
+              <h2 class="text-center text-2xl mb-10 font-bold">Sign Up</h2>
+              <form action="">
+                <label for="usernameInput">Username: </label><br />
+                <input
+                  type="text"
+                  id="usernameInput"
+                  placeholder="Enter your username"
+                  class="border mb-5 w-full rounded-sm p-2"
+                />
+                <br />
+                <label for="emailInput">Email: </label><br />
+                <input
+                  type="email"
+                  id="emailInput"
+                  placeholder="Enter your email"
+                  class="border mb-5 w-full rounded-sm p-2"
+                />
+                <br />
+                <label for="passwordInput">Password: </label><br />
+                <input
+                  type="password"
+                  id="passwordInput"
+                  placeholder="Enter your password"
+                  class="border mb-5 w-full rounded-sm p-2"
+                />
+
+                <input type="checkbox" id="isAgree" class="mb-3" />
+                <label for="isAgree"
+                  >I agree to
+                  <a href="#" class="text-blue-800 underline"
+                    >terms and conditions</a
+                  >
+                  and
+                  <a href="#" class="text-blue-800 underline"
+                    >privacy policy</a
+                  ></label
+                >
+
+                <input
+                  class="bg-primary-100 font-medium text-white mb-5 w-full py-3 rounded-md hover:bg-primary-75"
+                  type="button"
+                  value="Sign Up"
+                />
+              </form>
+              <p>
+                Already have an account?
+                <a
+                  href="#login-html"
+                  class="text-blue-800 hover:text-blue-600 hover:underline"
+                  >login <i class="fa-solid fa-arrow-right text-sm"></i
+                ></a>
+              </p>
+            </article>
+          </main>
+        </header>
+      </body>
+    </html>
+  </body>
+</html>
