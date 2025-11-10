@@ -1,3 +1,8 @@
-.vscode
+# --------------------
+# Dependency Directories
+# --------------------
+node_modules/
+
+# OS and Editor specific files
 .DS_Store
-src/output.css
+.vscode/
