@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="../src/output.css" />
+    <!-- font-awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fav icon -->
+    <link
+      rel="shortcut icon"
+      href="https://content.jdmagicbox.com/v2/comp/mahabubnagar/m1/9999p8542.8542.170515100525.r1m1/catalogue/mahendar-real-estates-shadnagar-mahabubnagar-real-estate-agents-6pvjg7ty7i-250.jpg"
+      type="image/x-icon"
+    />
+
+    <!-- script config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+  </head>
+  <body class="theme-transition dark:bg-gray-500">
+    <header class="fixed inset-x-0 top-0 z-50">
+      <nav
+        class="bg-white dark:bg-gray-800 shadow-sm flex items-center justify-between p-4 lg:px-8"
+        aria-label="Global"
+      >
+        <!-- Logo -->
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <span class="font-bold text-2xl dark:text-white">Real</span>
+            <span class="text-orange-600 font-bold text-2xl">Estate</span>
+          </a>
+        </div>
+
+        <!-- Desktop menu links -->
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="./index.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Home</a
+          >
+          <a
+            href="./pages/buy-page.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Buy</a
+          >
+          <a
+            href="./pages/rent.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Rent</a
+          >
+          <a
+            href="./pages/agent.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Agent</a
+          >
+          <a
+            href="./pages/about.html"
+            class="text-lg font-semibold hover:underline hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >About</a
+          >
+        </div>
+
+        <!-- Right-side buttons (desktop) -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center">
+          <!-- Dark/Light Mode Toggle Button -->
+          <button
+            id="theme-toggle"
+            type="button"
+            class="p-2 mr-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg"
+          >
+            <svg
+              id="theme-toggle-dark-icon"
+              class="w-5 h-5 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+            <svg
+              id="theme-toggle-light-icon"
+              class="w-5 h-5 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+
+          <a
+            href="./pages/login.html"
+            class="text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400 p-2 rounded-full text-center"
+            >Log in</a
+          >
+          <a
+            href="./pages/sign-up.html"
+            class="text-lg font-semibold border text-orange-700 hover:bg-orange-500 hover:text-white dark:border-orange-500 dark:text-orange-500 dark:hover:bg-orange-500 dark:hover:text-white p-2 rounded-md text-center ml-2"
+            >Sign Up</a
+          >
+        </div>
+
+        <!-- Mobile menu button and theme toggle -->
+        <div class="flex lg:hidden items-center">
+          <!-- Dark/Light Mode Toggle Button (Mobile) -->
+          <button
+            id="theme-toggle-mobile"
+            type="button"
+            class="p-2 mr-2 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg"
+          >
+            <svg
+              id="theme-toggle-dark-icon-mobile"
+              class="w-5 h-5 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+              ></path>
+            </svg>
+            <svg
+              id="theme-toggle-light-icon-mobile"
+              class="w-5 h-5 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-orange-700 dark:text-orange-500"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              id="menu-open"
+              class="size-6 block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <svg
+              id="menu-close"
+              class="size-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile dropdown menu (smooth) -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 shadow-md border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="space-y-2 p-4">
+          <a
+            href="index.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Home</a
+          >
+          <a
+            href="./pages/buy-page.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Buy</a
+          >
+          <a
+            href="./pages/rent.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Rent</a
+          >
+          <a
+            href="./pages/agent.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Agent</a
+          >
+          <a
+            href="./pages/about.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >About</a
+          >
+          <hr class="dark:border-gray-700" />
+          <a
+            href="./pages/login.html"
+            class="block text-lg font-semibold hover:text-orange-700 dark:text-white dark:hover:text-orange-400"
+            >Log in</a
+          >
+          <a
+            href="./pages/sign-up.html"
+            class="block text-lg font-semibold text-orange-700 dark:text-orange-500 border border-orange-700 dark:border-orange-500 rounded-md px-4 py-2 hover:bg-orange-500 hover:text-white dark:hover:bg-orange-500 dark:hover:text-white"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="w-ful">
+        <img
+          src="../images/apartmen-background.png"
+          alt=""
+          class="mb-20 w-full px-2 rounded-lg"
+        />
+      </div>
+
+      <!-- Our service container -->
+      <h2 class="font-bold text-center text-4xl dark:text-white">
+        Find Your Perfect Home with Confidence
+      </h2>
+      <section class="md:flex md:justify-around md:mx-10 my-10">
+        <article
+          class="border border-orange-500 w-xs py-10 px-5 rounded-lg bg-gray-100 mx-auto md:mx-0 mb-10 dark:bg-gray-800"
+        >
+          <i
+            class="fa-regular fa-house text-[128px] mx-auto block dark:text-white"
+          ></i>
+          <p class="text-orange-500 text-center text-2xl font-bold mb-5">
+            Property Listings
+          </p>
+          <p class="text-justify text-sm text-gray-800 dark:text-gray-100">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Reprehenderit id quisquam consequuntur eos cupiditate a numquam
+            accusamus atque reiciendis dolore recusandae nihil, veritatis sint
+            obcaecati.
+          </p>
+        </article>
+        <article
+          class="border border-orange-500 w-xs py-10 px-5 rounded-lg bg-gray-100 mx-auto md:mx-0 mb-10 dark:bg-gray-800"
+        >
+          <i
+            class="fa-regular fa-handshake text-[128px] mx-auto block dark:text-white"
+          ></i>
+          <p class="text-orange-500 text-center text-2xl font-bold mb-5">
+            Trusted Agents
+          </p>
+          <p class="text-justify text-sm dark:text-gray-100">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+            excepturi corporis ab repellat laudantium commodi maiores ipsa, in
+            ipsam quod dolore? Qui architecto provident numquam eligendi cumque
+            non aspernatur voluptatem.
+          </p>
+        </article>
+        <article
+          class="border border-orange-500 w-xs py-10 px-5 rounded-lg bg-gray-100 mx-auto md:mx-0 mb-10 dark:bg-gray-800"
+        >
+          <i
+            class="fa-regular fa-circle-question text-[128px] mx-auto block dark:text-white"
+          ></i>
+          <p class="text-orange-500 text-center text-2xl font-bold mb-5">
+            Customer Support
+          </p>
+          <p class="text-justify text-sm dark:text-gray-100">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            placeat, doloribus incidunt qui obcaecati adipisci ipsum deleniti
+            ducimus, ex architecto animi id accusamus quos dignissimos iusto
+            delectus quae! Enim, rerum.
+          </p>
+        </article>
+      </section>
+
+      <!-- Contact-Us Section -->
+      <section class="md:flex md:mx-10 justify-center">
+        <article
+          class="w-sm md:w-2xl mx-auto md:mx-0 mb-10 md:mb-0 px-5 py-5 bg-gray-100 dark:bg-gray-800"
+        >
+          <p class="text-orange-500 font-bold text-3xl text-center mb-3">
+            Contact Us
+          </p>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-location-dot dark:text-gray-100"></i>
+            <p class="dark:text-gray-100">Toul Kork, Phnom Penh</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-phone dark:text-gray-100"></i>
+            <p class="dark:text-gray-100">+855 12 555 999</p>
+          </div>
+          <div class="flex items-center gap-2 mb-3">
+            <i class="fa-solid fa-envelope dark:text-gray-100"></i>
+            <p class="dark:text-gray-100">info.realestate@gmail.com</p>
+          </div>
+
+          <hr class="mb-3" />
+          <div class="flex gap-2 mb-3">
+            <i
+              class="fa-brands fa-facebook hover:text-orange-500 dark:text-gray-100 dark:hover:text-orange-500"
+            ></i>
+            <i
+              class="fa-brands fa-instagram hover:text-orange-500 dark:text-gray-100 dark:hover:text-orange-500"
+            ></i>
+            <i
+              class="fa-brands fa-telegram hover:text-orange-500 dark:text-gray-100 dark:hover:text-orange-500"
+            ></i>
+            <i
+              class="fa-brands fa-tiktok hover:text-orange-500 dark:text-gray-100 dark:hover:text-orange-500"
+            ></i>
+          </div>
+
+          <!-- Message section -->
+          <p class="text-orange-500 font-bold text-3xl text-center mb-3">
+            Message
+          </p>
+          <form action="">
+            <label for="usernameInput" class="dark:text-gray-100">Name: </label
+            ><br />
+            <input
+              type="text"
+              id="usernameInput"
+              placeholder="Enter your name"
+              class="border mb-5 w-full rounded-sm p-2 dark:text-gray-100"
+            />
+            <br />
+            <label for="emailInput" class="dark:text-gray-100">Email: </label
+            ><br />
+            <input
+              type="email"
+              id="emailInput"
+              placeholder="Enter your email"
+              class="border mb-5 w-full rounded-sm p-2 dark:text-gray-100"
+            />
+            <br />
+            <label for="messageInput" class="dark:text-gray-100"
+              >Message: </label
+            ><br />
+            <textarea
+              name="message"
+              id="messageInput"
+              placeholder="Write your message here..."
+              class="border mb-2 w-full rounded-sm p-2 dark:text-gray-100"
+            ></textarea>
+
+            <button
+              class="bg-orange-500 font-medium text-white mb-5 w-full py-3 rounded-md hover:bg-orange-400"
+              type="button"
+            >
+              Send Message
+            </button>
+          </form>
+        </article>
+        <article>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1400/1*RCHnDGuMM6C1NY4mPPxgfw.jpeg"
+            alt=""
+            class="w-full h-auto"
+          />
+        </article>
+      </section>
+    </main>
+
+    <footer class="p-8 w-full mt-20 bg-gray-200">
+      <div
+        class="flex flex-col md:flex-row md:justify-between md:items-start gap-10 max-w-7xl mx-auto"
+      >
+        <!-- Left Logo and Info -->
+        <div class="md:w-1/2">
+          <span class="font-bold text-2xl">Real</span>
+          <span class="text-orange-600 font-bold text-2xl"> Estate</span>
+          <p class="text-lg text-gray-800 capitalize">
+            Where Every Key Unlocks a New Chapter
+          </p>
+          <hr class="border-0 h-[1px] bg-gray-300 mt-5 w-[55%]" />
+          <div class="flex mt-4 space-x-4 text-gray-800">
+            <a href="#" title="Facebook">
+              <i class="fa-brands fa-facebook hover:text-orange-500"></i>
+              <span class="sr-only">Facebook</span>
+            </a>
+            <a href="#" title="Instagram">
+              <i
+                class="fa-brands fa-square-instagram hover:text-orange-500"
+              ></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="#" title="Twitter">
+              <i class="fa-brands fa-x-twitter hover:text-orange-500"></i>
+              <span class="sr-only">Twitter</span></a
+            >
+            <a href="#" title="YouTube">
+              <i class="fa-brands fa-youtube hover:text-orange-500"></i>
+              <span class="sr-only">YouTube</span>
+            </a>
+            <a href="#" title="GitHub">
+              <i class="fa-brands fa-github hover:text-orange-500"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Grid Navigation -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center md:text-left text-sm text-gray-500 w-full md:w-1/2"
+        >
+          <!-- Column 1 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Navigation</h3>
+            <ul>
+              <li><a href="buy.html" class="hover:text-black">Buy</a></li>
+              <li><a href="rent.html" class="hover:text-black">Rent</a></li>
+              <li><a href="agent.html" class="hover:text-black">Agent</a></li>
+              <li>
+                <a href="about_us.html" class="hover:text-black">About</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Support</h3>
+            <ul>
+              <li><a href="#" class="hover:text-black">FAQ</a></li>
+              <li><a href="#" class="hover:text-black">Service</a></li>
+              <li><a href="#" class="hover:text-black">Guide</a></li>
+              <li><a href="#" class="hover:text-black">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Legal</h3>
+            <ul>
+              <li><a href="#" class="hover:text-black">Term of service</a></li>
+              <li><a href="#" class="hover:text-black">Privacy policy</a></li>
+              <li><a href="#" class="hover:text-black">License</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 mx-8 border-0 h-[1px] bg-gray-300" />
+      <div class="text-center">
+        <p class="text-gray-800 text-sm">
+          © 2024 Real Estate, All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="/js/spaghetti.js"></script>
+  </body>
+</html>
